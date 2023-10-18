@@ -1,38 +1,359 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /* main class */
+  .class--wrapper {
+   display: flex;
+   
+  }
+  /* end main class */
+  
+  
+  /* side Bar start */
+  
+  .sidebar{
+    position: static;
+    top: 0;
+    left: 0;
+    bottom:0;
+    width: 200px;
+    height: 135vh;
+    padding: 0 0.5rem;
+    color:white;
+    overflow: hidden;
+    transform: all 0.5s linear;
+    background-color: black;
+  }
+  .logo{
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    margin-bottom: 30px;
+    
+  }
+  .logo i {
+    font-size: x-large;
+  }
+  .main{
+    height: 88%;
+    position: relative;
+    list-style: none;
+  }
+  
+  .main li{
+    padding: 10px;
+    margin: 8px 0;
+    list-style: none;
+    border-radius: 8px;
+  }
+  .main li:hover{
+    background-color: rgba(21, 113, 27, 0.737);
+    transition: 0.5s;
+  }
+  .main a{
+    color: rgb(136, 136, 202);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .main i{
+  font-size: 10px;
+  }
+  .main a span{
+    overflow: hidden;
+    
+  }
+  .main a .text{
+    flex: 3;
+  }
+  .main a .greater-than{
+    font-size: 14px;
+  }
+  .first{
+    position: static;
+    background-color: rgb(84, 41, 123);
+  }
+  .last{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color:rgb(84, 41, 123);
+  }
+  .last .text{
+    flex: 1.5;
+  }
+  .last .text h6{
+    font-weight: 10;
+  }
+  .last img{
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  /* side Bar End */
+  
+  /* NAVBAR content start */
+  .nav-content{
+  position: relative;  
+  background-color: rgb(247, 247, 247);
+  width: 100%;  
+  
+  
+  }
+  .nav-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    padding: 10px 1rem;
+    
+     
+  }
+  .searchbox{
+    background: rgb(255, 255, 255);
+    padding: 4px 12px;
+    
+  }
+  .searchbox input{
+    padding: 6px;
+    border-radius: 8px;
+  }
+  .searchbox i{
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+  
+  }
+  .searchbox i:hover{
+    transform: scale(1.1);
+  }
+  /* NAVBAR content end */
+  
+  /* Head Content start */
+  .head-content{
+    padding: 1.0rem;
+    border-radius: 10px;
+    width: 100%;
+  }
+  .head-wrap{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  
+  }
+  .payment{
+    background-color:white;
+    border-radius: 10px;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+  }
+  .head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding: 20px 0px 10px 0px;
+  
+  }
+  .amount{
+    display: flex;
+    gap: 10px;
+  }
+  .set img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  } 
+  .set1{
+    margin-top: 10px;
+  }
+  .fa-arrow-down{
+  color: red;
+  }
+  .fa-arrow-up{
+    color: green;
+  }
+  .green{
+    color: green;
+  }
+  .red{
+    color: red;
+  }
+  /* Head content end */
+  
+  /* Chart start */
+  .chart{
+    padding: 1.0rem;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  
+  }
+  .chart-cus{
+    background-color: white;
+    height: 230px;
+    width: 24%;
+    flex-wrap:wrap-reverse;
+    padding: 10px;
+    
+  }
+  #donut{
+    height: 150px;
+    
+  }
+  .bar-chart{ 
+    position: absolute;  
+    width: 69%; 
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap; 
+    color: #fff;
+    margin-top: 80px;
+  }
+  .skill{ 
+    position: relative;
+    flex:0.1; 
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .graph{ 
+    position: absolute; 
+    width: 30px; 
+    background:lightblue;
+    border-radius:5px ; 
+    bottom: 0; 
+    left: 70%; 
+    flex-wrap: wrap;
+    transform: translateX(-50%);
+  }
+  .graph-1{
+    position: absolute; 
+    width: 30px; 
+    background:blue;
+    border-radius:5px ; 
+    bottom: 0; 
+    left: 70%; 
+    transform: translateX(-50%);   
+  }
+  .name{
+     position: absolute; 
+    bottom: -30px; 
+    text-align: center; 
+    left:70%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+    color: grey;
+    font-weight: 100;  
+    padding: 2px 6px;
+    }
+  .percentage{
+    position: absolute;
+    top: -20px; 
+    text-align: center;
+    left:0; 
+    right: 0;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  /* bar end */
+  .chart-content{
+  position: absolute;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  width: 71%;
+  height: 200px;
+  padding: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
   }
-  to {
-    transform: rotate(360deg);
+  .chart--main{
+    background-color: white;
+    width: 74%;
   }
-}
+  .head-chart{
+    width: 71%;
+  }
+  .chart--1 select{
+    padding: 6px;
+  }
+  
+  /* Pig chart start*/
+  .pig{
+    display:flex;
+    flex-wrap: wrap;
+  }
+  /* Pig chart end */
+  /* Chart End */
+  /* table content start */
+  .table{
+    padding: 1.0rem;
+    border-radius: 10px;
+    width: 98%;
+    position: relative;
+    background-color: white;
+  }
+  .table-space{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;  
+  }
+  .table-opt{
+    padding: 4px 12px;
+   
+  }
+  
+  .table-opt input{
+    padding: 8px;
+    border-radius: 8px;
+    background-color: rgb(233, 233, 233);
+  }
+  .table-opt select{
+    padding: 6px;
+    margin-left:10px;
+    background-color: rgb(233, 233, 233);
+  }
+  .table-opt i{
+    cursor: pointer;
+    transition: all 0.9s ease-in;
+  }
+  
+  .table-1{
+    color: rgb(157, 157, 157);
+    width: 100%;
+    
+    
+  }
+  .space--table{
+    text-align: left;
+  }
+  .space--table h5{
+    color: black;
+  }
+  .favi img{
+    width: 60px;
+    height: 40px;
+  }
+  .favi{
+    display: flex;
+    gap:20px
+  }
+  
+  
+  /* table content end */
